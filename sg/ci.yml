@@ -1,4 +1,6 @@
 ---
+include:
+  - vpc/ci.yml
 .sg:
   extends: .base-rules
   variables:

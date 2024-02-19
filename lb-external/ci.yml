@@ -1,4 +1,6 @@
 ---
+include:
+  - vpc/ci.yml
 .lb-external:
   extends: .base-rules
   variables:
