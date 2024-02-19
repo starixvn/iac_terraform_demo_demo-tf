@@ -30,7 +30,7 @@ build-lb-external:
       when: never
     - !reference [.base-rules, rules]
   extends: [.lb-external, .plan]
-  needs: []
+  needs: ["deploy-vpc"]
 
 deploy-lb-external:
   stage: deploy_lb

@@ -30,7 +30,7 @@ build-ec2:
       when: never
     - !reference [.base-rules, rules]
   extends: [.ec2, .plan]
-  needs: []
+  needs: ["deploy-vpc"]
 
 deploy-ec2:
   stage: deploy_ec2
