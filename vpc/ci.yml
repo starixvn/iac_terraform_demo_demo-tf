@@ -24,6 +24,7 @@ validate-security-checkov-vpc:
   extends: [.vpc, .validate_security_checkov]
 
 build-vpc:
+  stage: build_vpc
   rules:
     - if: $RULES_CHANGES_PATH != "vpc/**/*"
       when: never
@@ -32,6 +33,7 @@ build-vpc:
   needs: []
 
 deploy-vpc:
+  stage: deploy_vpc
   rules:
     - if: $RULES_CHANGES_PATH != "vpc/**/*"
       when: never
@@ -40,6 +42,7 @@ deploy-vpc:
   needs: ["build-vpc"]
 
 destroy-vpc:
+  stage: destroy_vpc
   rules:
     - if: $RULES_CHANGES_PATH != "vpc/**/*"
       when: never
