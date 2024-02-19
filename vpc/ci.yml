@@ -30,7 +30,6 @@ build-vpc:
       when: never
     - !reference [.base-rules, rules]
   extends: [.vpc, .plan]
-  needs: []
 
 deploy-vpc:
   stage: deploy_vpc
@@ -39,7 +38,7 @@ deploy-vpc:
       when: never
     - !reference [.base-rules, rules]
   extends: [.vpc, .apply]
-  needs: ["build-vpc"]
+  #needs: ["build-vpc"]
 
 destroy-vpc:
   stage: destroy_vpc
