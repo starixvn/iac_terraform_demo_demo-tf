@@ -30,7 +30,7 @@ build-sg:
       when: never
     - !reference [.base-rules, rules]
   extends: [.sg, .plan]
-  needs: []
+  needs: ["deploy-vpc"]
 
 deploy-sg:
   stage: deploy_sg
