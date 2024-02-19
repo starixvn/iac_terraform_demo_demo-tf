@@ -1,0 +1,6 @@
+---
+include:
+  - project: "iac-terraform/core-ci"
+    ref: demo
+    file: ".gitlab-ci.yml"
+  - local: "**/ci.yml"

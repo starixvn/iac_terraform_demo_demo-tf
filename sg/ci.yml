@@ -1,0 +1,49 @@
+---
+.sg:
+  extends: .base-rules
+  variables:
+    RULES_CHANGES_PATH: "sg/**/*"
+    DIR_PATH: "sg"
+
+code-quality-sg-terraform-lint:
+  extends: [.sg, .terraform_lint]
+
+code-quality-sg-terraform-fmt:
+  extends: [.sg, .terraform_fmt]
+
+code-quality-sg-yaml-lint:
+  extends: [.sg, .yaml_lint]
+
+validate-syntax-sg:
+  extends: [.sg, .validate_syntax]
+
+validate-security-sg:
+  extends: [.sg, .validate_security]
+
+validate-security-checkov-sg:
+  extends: [.sg, .validate_security_checkov]
+
+build-sg:
+  rules:
+    - if: $RULES_CHANGES_PATH != "sg/**/*"
+      when: never
+    - !reference [.base-rules, rules]
+  extends: [.sg, .plan]
+  needs: []
+
+deploy-sg:
+  rules:
+    - if: $RULES_CHANGES_PATH != "sg/**/*"
+      when: never
+    - !reference [.base-rules, rules]
+  extends: [.sg, .apply]
+  needs: ["build-sg"]
+
+destroy-sg:
+  rules:
+    - if: $RULES_CHANGES_PATH != "sg/**/*"
+      when: never
+    - !reference [.destroy, rules]
+    - !reference [.base-rules, rules]
+  extends: [.sg, .destroy]
+  needs: ["build-sg"]
