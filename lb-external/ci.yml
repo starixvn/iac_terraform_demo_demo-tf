@@ -2,7 +2,7 @@
 .lb-external:
   extends: .base-rules
   variables:
-    RULES_CHANGES_PATH: "lb-external/**/*"
+    RULES_CHANGES_PATH: "*/**/*"
     DIR_PATH: "lb-external"
 
 code-quality-lb-external-terraform-lint:

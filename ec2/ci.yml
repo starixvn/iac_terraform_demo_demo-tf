@@ -2,7 +2,7 @@
 .ec2:
   extends: .base-rules
   variables:
-    RULES_CHANGES_PATH: "ec2/**/*"
+    RULES_CHANGES_PATH: "*/**/*"
     DIR_PATH: "ec2"
 
 code-quality-ec2-terraform-lint:
