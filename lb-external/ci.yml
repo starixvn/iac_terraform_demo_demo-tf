@@ -30,7 +30,6 @@ build-lb-external:
       when: never
     - !reference [.base-rules, rules]
   extends: [.lb-external, .plan]
-  needs: ["deploy-vpc"]
 
 deploy-lb-external:
   stage: deploy_lb
@@ -39,7 +38,7 @@ deploy-lb-external:
       when: never
     - !reference [.base-rules, rules]
   extends: [.lb-external, .apply]
-  needs: ["build-lb-external"]
+  #needs: ["build-lb-external"]
 
 destroy-lb-external:
   stage: destroy_lb

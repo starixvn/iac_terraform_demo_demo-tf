@@ -30,7 +30,6 @@ build-ec2:
       when: never
     - !reference [.base-rules, rules]
   extends: [.ec2, .plan]
-  needs: ["deploy-vpc"]
 
 deploy-ec2:
   stage: deploy_ec2
@@ -39,7 +38,7 @@ deploy-ec2:
       when: never
     - !reference [.base-rules, rules]
   extends: [.ec2, .apply]
-  needs: ["build-ec2"]
+  #needs: ["build-ec2"]
 
 destroy-ec2:
   stage: destroy_ec2

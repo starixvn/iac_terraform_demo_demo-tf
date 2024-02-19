@@ -30,7 +30,6 @@ build-bastion:
       when: never
     - !reference [.base-rules, rules]
   extends: [.bastion, .plan]
-  needs: ["deploy-vpc"]
 
 deploy-bastion:
   stage: deploy_bastion
@@ -39,7 +38,7 @@ deploy-bastion:
       when: never
     - !reference [.base-rules, rules]
   extends: [.bastion, .apply]
-  needs: ["build-bastion"]
+  #needs: ["build-bastion"]
 
 destroy-bastion:
   stage: destroy_bastion

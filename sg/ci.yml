@@ -1,6 +1,4 @@
 ---
-.vpc:
-  extends: .base-rules
 .sg:
   extends: .base-rules
   variables:
@@ -31,8 +29,7 @@ build-sg:
     - if: $RULES_CHANGES_PATH != "sg/**/*"
       when: never
     - !reference [.base-rules, rules]
-  extends: [.vpc, .sg, .plan]
-  needs: ["deploy-vpc"]
+  extends: [.sg, .plan]
 
 deploy-sg:
   stage: deploy_sg
@@ -41,7 +38,7 @@ deploy-sg:
       when: never
     - !reference [.base-rules, rules]
   extends: [.sg, .apply]
-  needs: ["build-sg"]
+  #needs: ["build-sg"]
 
 destroy-sg:
   stage: destroy_sg
