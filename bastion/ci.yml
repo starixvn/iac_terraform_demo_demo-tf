@@ -2,7 +2,7 @@
 .bastion:
   extends: .base-rules
   variables:
-    RULES_CHANGES_PATH: "bastion/**/*"
+    RULES_CHANGES_PATH: "*/**/*"
     DIR_PATH: "bastion"
 
 code-quality-bastion-terraform-lint:
