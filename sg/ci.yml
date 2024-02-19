@@ -2,7 +2,7 @@
 .sg:
   extends: .base-rules
   variables:
-    RULES_CHANGES_PATH: "**/**/*"
+    RULES_CHANGES_PATH: "**"
     DIR_PATH: "sg"
 
 code-quality-sg-terraform-lint:
