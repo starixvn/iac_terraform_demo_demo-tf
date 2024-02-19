@@ -24,6 +24,7 @@ validate-security-checkov-sg:
   extends: [.sg, .validate_security_checkov]
 
 build-sg:
+  stage: build_sg
   rules:
     - if: $RULES_CHANGES_PATH != "sg/**/*"
       when: never
@@ -32,6 +33,7 @@ build-sg:
   needs: []
 
 deploy-sg:
+  stage: deploy_sg
   rules:
     - if: $RULES_CHANGES_PATH != "sg/**/*"
       when: never
@@ -40,6 +42,7 @@ deploy-sg:
   needs: ["build-sg"]
 
 destroy-sg:
+  stage: destroy_sg
   rules:
     - if: $RULES_CHANGES_PATH != "sg/**/*"
       when: never

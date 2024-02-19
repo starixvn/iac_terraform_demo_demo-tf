@@ -1,3 +1,4 @@
+---
 .ec2:
   extends: .base-rules
   variables:
@@ -23,6 +24,7 @@ validate-security-checkov-ec2:
   extends: [.ec2, .validate_security_checkov]
 
 build-ec2:
+  stage: build_ec2
   rules:
     - if: $RULES_CHANGES_PATH != "ec2/**/*"
       when: never
@@ -31,6 +33,7 @@ build-ec2:
   needs: []
 
 deploy-ec2:
+  stage: deploy_ec2
   rules:
     - if: $RULES_CHANGES_PATH != "ec2/**/*"
       when: never
@@ -39,6 +42,7 @@ deploy-ec2:
   needs: ["build-ec2"]
 
 destroy-ec2:
+  stage: destroy_ec2
   rules:
     - if: $RULES_CHANGES_PATH != "ec2/**/*"
       when: never
