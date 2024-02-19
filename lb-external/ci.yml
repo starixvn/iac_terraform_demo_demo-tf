@@ -24,7 +24,7 @@ validate-security-checkov-lb-external:
   extends: [.lb-external, .validate_security_checkov]
 
 build-lb-external:
-  stage: build_lb-external
+  stage: build_lb
   rules:
     - if: $RULES_CHANGES_PATH != "lb-external/**/*"
       when: never
@@ -33,7 +33,7 @@ build-lb-external:
   needs: []
 
 deploy-lb-external:
-  stage: deploy_lb-external
+  stage: deploy_lb
   rules:
     - if: $RULES_CHANGES_PATH != "lb-external/**/*"
       when: never
@@ -42,7 +42,7 @@ deploy-lb-external:
   needs: ["build-lb-external"]
 
 destroy-lb-external:
-  stage: destroy_lb-external
+  stage: destroy_lb
   rules:
     - if: $RULES_CHANGES_PATH != "lb-external/**/*"
       when: never
