@@ -24,7 +24,7 @@ validate-security-checkov-bastion:
   extends: [.bastion, .validate_security_checkov]
 
 build-bastion:
-  stage: build_bastion
+  stage: build_ec2
   rules:
     - if: $RULES_CHANGES_PATH != "bastion/**/*"
       when: never
@@ -32,7 +32,7 @@ build-bastion:
   extends: [.bastion, .plan]
 
 deploy-bastion:
-  stage: deploy_bastion
+  stage: deploy_ec2
   rules:
     - if: $RULES_CHANGES_PATH != "bastion/**/*"
       when: never
@@ -41,7 +41,7 @@ deploy-bastion:
   #needs: ["build-bastion"]
 
 destroy-bastion:
-  stage: destroy_bastion
+  stage: destroy_ec2
   rules:
     - if: $RULES_CHANGES_PATH != "bastion/**/*"
       when: never
