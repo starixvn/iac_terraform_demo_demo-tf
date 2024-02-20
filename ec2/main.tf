@@ -6,7 +6,7 @@ module "proxy_gw_linux" {
   instance_type          = each.value.instance_type
   name                   = lower("vn-${var.team}-${var.environment}-${each.key}")
   ami                    = data.aws_ami.os[each.value.ami].id
-  subnet_id              = each.value.subnet_id
+  subnet_id              = data.terraform_remote_state.vpc.outputs.private_subnets[0]
   #data.terraform_remote_state.vpc.outputs.private_subnets[0]
   vpc_security_group_ids = [data.terraform_remote_state.sg.outputs.proxy_gw_sg]
   #[module.proxy_gw_sg.security_group_id]
