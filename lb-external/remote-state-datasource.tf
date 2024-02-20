@@ -9,6 +9,7 @@ data "terraform_remote_state" "vpc" {
 }
 
 # Terraform Remote State  - Certificate
+/*
 data "terraform_remote_state" "acm_cert" {
   backend = "s3"
   config = {
@@ -17,6 +18,7 @@ data "terraform_remote_state" "acm_cert" {
     region = "${var.aws_region}"
   }
 }
+*/
 data "terraform_remote_state" "sg" {
   backend = "s3"
   config = {
