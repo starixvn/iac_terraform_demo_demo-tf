@@ -115,7 +115,7 @@ module "private_zabbix_linux" {
     http_tokens                 = "required"
     http_put_response_hop_limit = 8
   }
-  user_data = file("${path.module}/linux_ssh_prepare.sh")
+  user_data = file("${path.module}/proxy_gw_prepare.sh")
   instance_tags = {
     OS = each.value.ami,
   }

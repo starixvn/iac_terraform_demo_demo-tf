@@ -37,6 +37,7 @@ module "external_proxy_gw" {
   ]
 
   # HTTPS Listener
+/*  
   https_listeners = [
     # HTTPS Listener Index = 0 for HTTPS 443
     {
@@ -69,6 +70,7 @@ module "external_proxy_gw" {
       certificate_arn      = data.terraform_remote_state.acm_cert.outputs.aws_acm_certificate_staging
     }
   ]
+*/
   # Target Groups
   target_groups = [
     {
