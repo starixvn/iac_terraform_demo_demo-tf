@@ -1,0 +1,5 @@
+project = "cloud"
+team = "Lumi"
+aws_region = "ap-northeast-1"
+environment = "uat"
+aws_profile = "uat-iac-terraform-ci"
