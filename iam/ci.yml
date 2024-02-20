@@ -48,4 +48,4 @@ destroy-iam:
     - !reference [.destroy, rules]
     - !reference [.base-rules, rules]
   extends: [.iam, .destroy]
-  needs: ["build-iam"]
+  needs: ["deploy-iam"]

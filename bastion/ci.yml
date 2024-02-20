@@ -48,4 +48,4 @@ destroy-bastion:
     - !reference [.destroy, rules]
     - !reference [.base-rules, rules]
   extends: [.bastion, .destroy]
-  needs: ["build-bastion"]
+  needs: ["deploy-bastion"]

@@ -48,4 +48,4 @@ destroy-vpc:
     - !reference [.destroy, rules]
     - !reference [.base-rules, rules]
   extends: [.vpc, .destroy]
-  needs: ["build-vpc"]
+  needs: ["deploy-vpc"]
