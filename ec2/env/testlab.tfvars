@@ -14,7 +14,7 @@ public_key_location = "key/id_rsa.pub"
 private_key_location = "key/id_rsa"
 proxy_gw_vm = [
   {
-    "application_name" : "proxy-gw-01",
+    "application_name" : "app-01",
     "instance_type" : "t3.micro",
     "ami" : "ubuntu22",
     "volume_type" : "gp3",
@@ -23,7 +23,7 @@ proxy_gw_vm = [
     "tag" : "EC2"
   },
   {
-    "application_name" : "proxy-gw-02",
+    "application_name" : "app-02",
     "instance_type" : "t3.micro",
     "ami" : "ubuntu22",
     "volume_type" : "gp3",

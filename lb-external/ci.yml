@@ -48,4 +48,4 @@ destroy-lb-external:
     - !reference [.destroy, rules]
     - !reference [.base-rules, rules]
   extends: [.lb-external, .destroy]
-  needs: ["build-lb-external"]
+  needs: ["deploy-lb-external"]

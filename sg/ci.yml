@@ -48,4 +48,4 @@ destroy-sg:
     - !reference [.destroy, rules]
     - !reference [.base-rules, rules]
   extends: [.sg, .destroy]
-  needs: ["build-sg"]
+  needs: ["deploy-sg"]

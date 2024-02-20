@@ -48,4 +48,4 @@ destroy-ec2:
     - !reference [.destroy, rules]
     - !reference [.base-rules, rules]
   extends: [.ec2, .destroy]
-  needs: ["build-ec2"]
+  needs: ["deploy-ec2"]
