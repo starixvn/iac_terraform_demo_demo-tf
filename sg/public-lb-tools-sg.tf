@@ -5,7 +5,8 @@ module "lb_tools_sg_v1" {
 
   name        = lower("${var.team}-${var.environment}-lb-tools-sg")
   description   = "Managed by vnTerraform"
-  vpc_id      = var.vpc_id
+  vpc_id      = data.terraform_remote_state.vpc.outputs.vpc_id
+  #var.vpc_id
   # Egress Rule - all-all open
   egress_rules = ["all-all"]
   tags         = local.common_tags
@@ -70,7 +71,8 @@ module "lb_app_sg_v1" {
 
   name        = lower("${var.team}-${var.environment}-lb-app-sg")
   description   = "Managed by vnTerraform"
-  vpc_id      = var.vpc_id
+  vpc_id      = data.terraform_remote_state.vpc.outputs.vpc_id
+  #var.vpc_id
   # Egress Rule - all-all open
   egress_rules = ["all-all"]
   tags         = local.common_tags

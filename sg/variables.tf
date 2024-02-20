@@ -17,6 +17,15 @@ variable "aws_region" {
   default     = "ap-northeast-1"
 }
 
+variable "aws_region_bucket_remote_state" {
+  description = "aws_region_bucket"
+  type        = string
+}
+variable "aws_region_key_remote_state" {
+  description = "aws_region_key"
+  type        = string
+}
+
 variable "team" {
   type = string
 }

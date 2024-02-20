@@ -5,7 +5,8 @@ module "private_dba_sg_v1" {
   version       = "5.0.0"
   name          = lower("${var.team}-${var.environment}-db-sg")
   description   = "Managed by vnTerraform"
-  vpc_id        = var.vpc_id
+  vpc_id      = data.terraform_remote_state.vpc.outputs.vpc_id
+  #var.vpc_id
   ingress_rules = ["ssh-tcp", "all-icmp"]
   # Ingress Rules & CIDR Blocks
   ingress_cidr_blocks = var.cidr_block_internal

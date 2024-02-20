@@ -5,7 +5,8 @@ module "private_tool_sg_v1" {
   version     = "5.0.0"
   name        = lower("${var.team}-${var.environment}-private-tools-sg")
   description   = "Managed by vnTerraform"
-  vpc_id      = var.vpc_id
+  vpc_id      = data.terraform_remote_state.vpc.outputs.vpc_id
+  #var.vpc_id
   # Ingress Rules & CIDR Blocks
   ingress_rules       = ["ssh-tcp", "http-80-tcp", "http-8080-tcp", "all-icmp", "https-443-tcp"]
   ingress_cidr_blocks = var.cidr_block_internal
