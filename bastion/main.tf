@@ -10,7 +10,7 @@ module "public_bastion_linux" {
   root_block_device = [{
     volume_type           = each.value.volume_type
     volume_size           = each.value.volume_size
-    delete_on_termination = false
+    delete_on_termination = true
   }]
   metadata_options = {
     http_endpoint               = "enabled"
