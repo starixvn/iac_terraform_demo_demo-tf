@@ -19,8 +19,16 @@ proxy_gw_vm = [
     "ami" : "ubuntu22",
     "volume_type" : "gp3",
     "volume_size" : "20",
-    "subnet_id" : "subnet-06fe4c10600cb02db",
     "private_ip" : "10.6.48.10",
+    "tag" : "EC2"
+  },
+  {
+    "application_name" : "proxy-gw-02",
+    "instance_type" : "t3.micro",
+    "ami" : "ubuntu22",
+    "volume_type" : "gp3",
+    "volume_size" : "20",
+    "private_ip" : "10.6.48.11",
     "tag" : "EC2"
   },
 ]
