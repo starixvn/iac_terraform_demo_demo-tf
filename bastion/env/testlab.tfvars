@@ -12,7 +12,7 @@ private_key_location = "key/id_rsa"
 
 linux_vm = [
   {
-    "application_name" : "ssh-server-01",
+    "application_name" : "ssh-server-1",
     "instance_type" : "t2.micro",
     "ami" : "ubuntu22",
     "volume_type" : "gp3",
