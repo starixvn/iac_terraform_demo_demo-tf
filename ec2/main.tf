@@ -16,7 +16,7 @@ module "proxy_gw_linux" {
   root_block_device = [{
     volume_type           = each.value.volume_type
     volume_size           = each.value.volume_size
-    delete_on_termination = false
+    delete_on_termination = true
     tags = merge(
       local.common_tags,
       {
@@ -59,7 +59,7 @@ module "private_app_linux" {
   root_block_device = [{
     volume_type           = each.value.volume_type
     volume_size           = each.value.volume_size
-    delete_on_termination = false
+    delete_on_termination = true
     tags = merge(
       local.common_tags,
       {
@@ -102,7 +102,7 @@ module "private_zabbix_linux" {
   root_block_device = [{
     volume_type           = each.value.volume_type
     volume_size           = each.value.volume_size
-    delete_on_termination = false
+    delete_on_termination = true
     tags = merge(
       local.common_tags,
       {

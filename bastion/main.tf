@@ -3,14 +3,14 @@ module "public_bastion_linux" {
   version                = "5.1.0"
   for_each               = { for server in local.linux_instances : server.instance_name => server }
   instance_type          = each.value.instance_type
-  name                   = lower("${var.team}-${var.environment}-${each.key}")
+  name                   = lower("vn-${var.team}-${var.environment}-${each.key}")
   ami                    = data.aws_ami.os[each.value.ami].id
   subnet_id              = data.terraform_remote_state.vpc.outputs.public_subnets[0]
   vpc_security_group_ids = [module.public_bastion_linux_sg.security_group_id]
   root_block_device = [{
     volume_type           = each.value.volume_type
     volume_size           = each.value.volume_size
-    delete_on_termination = false
+    delete_on_termination = true
   }]
   metadata_options = {
     http_endpoint               = "enabled"
