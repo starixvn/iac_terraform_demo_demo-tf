@@ -55,9 +55,9 @@ variable "create_cloudwatch_log_group" {
   type        = string
   default     = "true"
 }
-variable "lb_subnets" {
-  type        = string
-}
+# variable "lb_subnets" {
+#   type        = string
+# }
 variable "lb_az_cross" {
   type        = string
 }
