@@ -19,14 +19,12 @@ locals {
 }
 
 # add 'mapUsers' section to 'aws-auth' configmap with Admins & Developers
-/*
 resource "time_sleep" "wait" {
-  create_duration = "300s"
+  create_duration = "60s"
   triggers = {
     cluster_endpoint = module.cluster.cluster_endpoint
   }
 }
-*/
 resource "kubernetes_config_map_v1_data" "aws_auth_users" {
   metadata {
     name      = "aws-auth"
@@ -40,7 +38,8 @@ resource "kubernetes_config_map_v1_data" "aws_auth_users" {
   force = true
 
   depends_on = [
-    module.cluster.cluster_name
+    module.cluster.cluster_name,
+    resource.time_sleep.wait
  ]
 }
 

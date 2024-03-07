@@ -67,8 +67,9 @@ module "cluster" {
   }
   vpc_id                          = data.terraform_remote_state.vpc.outputs.vpc_id #var.vpc_id
   subnet_ids                      = [
-    data.terraform_remote_state.vpc.outputs.public_subnets[0],
-    data.terraform_remote_state.vpc.outputs.public_subnets[1],
+    data.terraform_remote_state.vpc.outputs.private_subnets[0],
+    data.terraform_remote_state.vpc.outputs.private_subnets[1],
+    data.terraform_remote_state.vpc.outputs.private_subnets[2],
   ] #var.vpc_private_subnets
   eks_managed_node_groups         = var.eks_managed_node_groups
   iam_role_additional_policies = {

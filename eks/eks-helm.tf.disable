@@ -50,7 +50,7 @@ resource "helm_release" "haproxy-ingress-controller" {
   set {
     name  = "controller.service.annotations.service\\.beta\\.kubernetes\\.io/aws-load-balancer-subnets"
     type  = "string"
-    value = var.lb_subnets
+    value = "${data.terraform_remote_state.vpc.outputs.private_subnets[0]},${data.terraform_remote_state.vpc.outputs.private_subnets[1]},${data.terraform_remote_state.vpc.outputs.private_subnets[2]}"
   }
 
   set {
