@@ -58,9 +58,6 @@ variable "create_cloudwatch_log_group" {
 # variable "lb_subnets" {
 #   type        = string
 # }
-variable "lb_az_cross" {
-  type        = string
-}
 # variable "lb_private_ips" {
 #   type        = string
 # }
