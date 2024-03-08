@@ -16,12 +16,6 @@ allow_cidr_block_internal = ["10.6.0.0/16"]
 vpc_id = ""
 vpc_private_subnets = []
 ####
-###############
-namespaces = ["haproxy","sample","nexops"]
-###############
-admin_users     = ["troy.vo","dennis.le","ken.test", "troy.test"] #, "troy.vo"
-developer_users = ["dev1", "dev2"]
-
 autoscaling_average_cpu = 90
 cluster_version = "1.27"
 eks_managed_node_groups = {
