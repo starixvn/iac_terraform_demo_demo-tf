@@ -11,7 +11,6 @@ aws_region_bucket_remote_state_vn = "clouddemo-lumi-starix-tf-goldfish"
 
 allow_whitelist = ["202.78.231.32/27","120.72.109.32/29","120.72.83.128/29"]
 #lb_subnets = "subnet-04510efa6d218ba22\\,subnet-0298ca5ea219cc74f\\,subnet-06b24b20b5e0bfa35"
-lb_az_cross = "true"
 allow_cidr_block_internal = ["10.6.0.0/16"]
 vpc_id = ""
 vpc_private_subnets = []
@@ -153,9 +152,3 @@ eks_managed_node_groups = {
   },
   
 }
-
-###############
-spot_termination_handler_chart_name      = "aws-node-termination-handler"
-spot_termination_handler_chart_repo      = "https://aws.github.io/eks-charts"
-spot_termination_handler_chart_version   = "0.21.0"
-spot_termination_handler_chart_namespace = "kube-system"
