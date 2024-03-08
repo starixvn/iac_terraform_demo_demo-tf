@@ -30,7 +30,14 @@ eks_managed_node_groups = {
     use_custom_launch_template = true
 
     labels = {
-            "luminet-app" = "yes",
+            "luminet-app" = "no",
+            "sc1-games" = "no"
+            "sc2-games" = "no"
+            "sc1-api" = "yes"
+            "sc2-api" = "yes"
+            "sc1-games-backend" = "no"
+            "sc2-games-backend" = "no"
+            "nexops" = "yes"
           }
 
     ami_type     = "AL2_x86_64"
@@ -96,7 +103,13 @@ eks_managed_node_groups = {
     use_custom_launch_template = true
 
     labels = {
-            "luminet-app" = "yes",
+            "luminet-app" = "no",
+            "sc1-games" = "no"
+            "sc2-games" = "no"
+            "sc1-api" = "yes"
+            "sc2-api" = "yes"
+            "sc1-games-backend" = "no"
+            "sc2-games-backend" = "no"
             "nexops" = "yes"
           }
 
