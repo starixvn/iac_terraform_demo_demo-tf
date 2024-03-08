@@ -20,7 +20,7 @@ spot_termination_handler_chart_repo      = "https://aws.github.io/eks-charts"
 spot_termination_handler_chart_version   = "0.21.0"
 spot_termination_handler_chart_namespace = "kube-system"
 autoscaling_average_cpu = 90
-cluster_version = "1.27"
+cluster_version = "1.28"
 eks_managed_node_groups = {
   
 ######## APP SPOT
@@ -30,13 +30,13 @@ eks_managed_node_groups = {
     use_custom_launch_template = true
 
     labels = {
-            "luminet-app" = "no",
-            "sc1-games" = "no"
-            "sc2-games" = "no"
+            "luminet-app" = "yes",
+            "sc1-games" = "yes"
+            "sc2-games" = "yes"
             "sc1-api" = "yes"
             "sc2-api" = "yes"
-            "sc1-games-backend" = "no"
-            "sc2-games-backend" = "no"
+            "sc1-games-backend" = "yes"
+            "sc2-games-backend" = "yes"
             "nexops" = "yes"
           }
 
@@ -103,13 +103,13 @@ eks_managed_node_groups = {
     use_custom_launch_template = true
 
     labels = {
-            "luminet-app" = "no",
-            "sc1-games" = "no"
-            "sc2-games" = "no"
+            "luminet-app" = "yes",
+            "sc1-games" = "yes"
+            "sc2-games" = "yes"
             "sc1-api" = "yes"
             "sc2-api" = "yes"
-            "sc1-games-backend" = "no"
-            "sc2-games-backend" = "no"
+            "sc1-games-backend" = "yes"
+            "sc2-games-backend" = "yes"
             "nexops" = "yes"
           }
 

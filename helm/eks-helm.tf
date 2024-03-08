@@ -7,9 +7,9 @@ resource "helm_release" "haproxy-ingress-controller" {
   repository = "https://haproxytech.github.io/helm-charts"
   chart      = "kubernetes-ingress"
   version    = "1.33.1"
-  # values = [
-  #   "${file("values.yaml")}"
-  # ]
+  #  values = [
+  #    "${file("values_ori.yaml")}"
+  #  ]
   set {
     name  = "controller.service.type"
     value = "LoadBalancer"
