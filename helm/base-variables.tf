@@ -22,10 +22,15 @@ variable "aws_region_bucket_remote_state" {
   description = "aws_region_bucket"
   type        = string
 }
-variable "aws_region_key_remote_state" {
-  description = "aws_region_key"
+variable "aws_region_key_remote_state_vpc" {
+  description = "aws_region_key VPC"
   type        = string
 }
+variable "aws_region_key_remote_state_eks" {
+  description = "aws_region_key EKS"
+  type        = string
+}
+
 variable "allow_whitelist" {
   description = "allow whitelist"
   type        = list(string)

@@ -31,5 +31,5 @@ variable "developer_users" {
 
 ############################
 variable "lb_az_cross" {
-  type        = string
+  type = string
 }
