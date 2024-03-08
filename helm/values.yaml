@@ -247,13 +247,13 @@ controller:
 
   ## Compute Resources
   ## ref: https://kubernetes.io/docs/concepts/configuration/manage-compute-resources-container/
-  resources:
-  #  limits:
-  #    cpu: 10m
-  #    memory: 16Mi
-    requests:
-      cpu: 10m
-      memory: 16Mi
+  # resources:
+  # #  limits:
+  # #    cpu: 10m
+  # #    memory: 16Mi
+  #   requests:
+  #     cpu: 10m
+  #     memory: 16Mi
 
   ## Kubernetes Event-driven Autoscaling: KEDA 2.x
   ## ref: https://keda.sh/docs/2.3/concepts/scaling-deployments/
