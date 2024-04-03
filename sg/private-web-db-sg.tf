@@ -1,6 +1,6 @@
 # SG for Web Application
 module "private_web_sg_v1" {
-  source      = "gitlab.nexdev.net/iac-terraform/security-group/aws"
+  source      = "gitlab.nexdev.net/iac/security-group/aws"
   version     = "5.0.0"
   name        = lower("${var.team}-${var.environment}-web-sg")
   description   = "Managed by vnTerraform"

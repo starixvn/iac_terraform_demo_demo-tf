@@ -1,6 +1,6 @@
 # Security Group for Public Load Balancer
 module "lb_tools_sg_v1" {
-  source  = "gitlab.nexdev.net/iac-terraform/security-group/aws"
+  source  = "gitlab.nexdev.net/iac/security-group/aws"
   version = "5.0.0"
 
   name        = lower("${var.team}-${var.environment}-lb-tools-sg")
@@ -66,7 +66,7 @@ module "lb_tools_sg_v1" {
 }
 #################
 module "lb_app_sg_v1" {
-  source  = "gitlab.nexdev.net/iac-terraform/security-group/aws"
+  source  = "gitlab.nexdev.net/iac/security-group/aws"
   version = "5.0.0"
 
   name        = lower("${var.team}-${var.environment}-lb-app-sg")

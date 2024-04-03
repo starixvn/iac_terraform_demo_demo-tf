@@ -1,6 +1,6 @@
 ###################################################V1
 module "iam_assumable_role_custom_trust_policy_v1" {
-  source      = "gitlab.nexdev.net/iac-terraform/aws-iam/aws//modules/iam-assumable-role"
+  source      = "gitlab.nexdev.net/iac/aws-iam/aws//modules/iam-assumable-role"
   version     = "5.17.1"
   create_role = true
   create_instance_profile = true
@@ -24,7 +24,7 @@ data "aws_iam_policy_document" "custom_trust_policy_v1" {
 }
 
 module "iam_policy_v1" {
-  source  = "gitlab.nexdev.net/iac-terraform/aws-iam/aws//modules/iam-policy"
+  source  = "gitlab.nexdev.net/iac/aws-iam/aws//modules/iam-policy"
   version = "5.17.1"
 
   name        = lower("${var.team}-${var.environment}-EC2-Policy-v1")
@@ -80,7 +80,7 @@ EOF
 ############ CLOUD WATCH
 /*
 module "iam_assumable_role_cloud_watch_trust_policy" {
-  source      = "gitlab.nexdev.net/iac-terraform/aws-iam/aws//modules/iam-assumable-role"
+  source      = "gitlab.nexdev.net/iac/aws-iam/aws//modules/iam-assumable-role"
   version     = "5.17.1"
   create_role = true
   create_instance_profile = true
@@ -104,7 +104,7 @@ data "aws_iam_policy_document" "cloud_watch_trust_policy" {
 }
 */
 module "iam_policy_cloud_watch_v1" {
-  source  = "gitlab.nexdev.net/iac-terraform/aws-iam/aws//modules/iam-policy"
+  source  = "gitlab.nexdev.net/iac/aws-iam/aws//modules/iam-policy"
   version = "5.17.1"
 
   name        = lower("${var.team}-${var.environment}-CloudWatch-Policy-v1")
