@@ -1,5 +1,5 @@
 module "public_bastion_linux" {
-  source                 = "gitlab.nexdev.net/iac-terraform/ec2-instance/aws"
+  source                 = "gitlab.nexdev.net/iac/ec2-instance/aws"
   version                = "5.1.0"
   for_each               = { for server in local.linux_instances : server.instance_name => server }
   instance_type          = each.value.instance_type
@@ -27,7 +27,7 @@ module "public_bastion_linux" {
 }
 /*
 module "public_bastion_windows" {
-  source = "gitlab.nexdev.net/iac-terraform/ec2-instance/aws"
+  source = "gitlab.nexdev.net/iac/ec2-instance/aws"
   version = "5.1.0"
   for_each = {for server in local.windows_instances: server.instance_name =>  server}
   instance_type = each.value.instance_type
