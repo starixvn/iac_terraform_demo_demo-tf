@@ -3,7 +3,7 @@ aws_region = "ap-northeast-1"
 team = "Lumi"
 environment = "testlab"
 aws_profile = "test-iac-terraform-ci"
-aws_region_bucket_remote_state = "clouddemo-lumi-starix-tf-goldfish"
+aws_region_bucket_remote_state = "clouddemo-lumi-starix-tf-gazelle"
 aws_region_key_remote_state    = "env:/testlab/vpc-terraform.tfstate"
 ##############VPC
 ingress_cidr_blocks = ["202.78.231.32/27","120.72.109.32/29","120.72.83.128/29"] #["0.0.0.0/0"]
