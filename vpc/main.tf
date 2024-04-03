@@ -1,6 +1,6 @@
 
 module "vpc" {
-  source  = "gitlab.nexdev.net/iac-terraform/vpc/aws"
+  source  = "gitlab.nexdev.net/iac/vpc/aws"
   version = "5.1.0"
   name    = lower("${var.team}-${var.environment}-vpc")
   cidr    = var.vpc_cidr_block

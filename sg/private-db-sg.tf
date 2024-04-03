@@ -1,7 +1,7 @@
 
 # SG for DB
 module "private_dba_sg_v1" {
-  source        = "gitlab.nexdev.net/iac-terraform/security-group/aws"
+  source        = "gitlab.nexdev.net/iac/security-group/aws"
   version       = "5.0.0"
   name          = lower("${var.team}-${var.environment}-db-sg")
   description   = "Managed by vnTerraform"
