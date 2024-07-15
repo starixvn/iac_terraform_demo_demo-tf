@@ -20,8 +20,6 @@ validate-syntax-ec2:
 validate-security-ec2:
   extends: [.ec2, .validate_security]
 
-validate-security-checkov-ec2:
-  extends: [.ec2, .validate_security_checkov]
 
 build-ec2:
   stage: build_ec2

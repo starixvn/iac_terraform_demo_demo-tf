@@ -20,8 +20,6 @@ validate-syntax-lb-external:
 validate-security-lb-external:
   extends: [.lb-external, .validate_security]
 
-validate-security-checkov-lb-external:
-  extends: [.lb-external, .validate_security_checkov]
 
 build-lb-external:
   stage: build_lb

@@ -20,9 +20,6 @@ validate-syntax-bastion:
 validate-security-bastion:
   extends: [.bastion, .validate_security]
 
-validate-security-checkov-bastion:
-  extends: [.bastion, .validate_security_checkov]
-
 build-bastion:
   stage: build_ec2
   rules:

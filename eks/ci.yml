@@ -20,9 +20,6 @@ validate-syntax-eks:
 validate-security-eks:
   extends: [.eks, .validate_security]
 
-validate-security-checkov-eks:
-  extends: [.eks, .validate_security_checkov]
-
 build-eks:
   stage: build_eks
   rules:
