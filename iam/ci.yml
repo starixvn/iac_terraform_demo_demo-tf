@@ -20,8 +20,6 @@ validate-syntax-iam:
 validate-security-iam:
   extends: [.iam, .validate_security]
 
-validate-security-checkov-iam:
-  extends: [.iam, .validate_security_checkov]
 
 build-iam:
   stage: build_sg_iam
