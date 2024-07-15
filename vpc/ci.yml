@@ -20,9 +20,6 @@ validate-syntax-vpc:
 validate-security-vpc:
   extends: [.vpc, .validate_security]
 
-validate-security-checkov-vpc:
-  extends: [.vpc, .validate_security_checkov]
-
 build-vpc:
   stage: build_vpc
   rules:
