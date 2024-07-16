@@ -38,7 +38,7 @@ deploy-eks:
   #needs: ["build-eks"]
 
 destroy-eks:
-  stage: destroy_eks
+  stage: deploy_eks
   rules:
     - if: $RULES_CHANGES_PATH != "eks/**/*"
       when: never
