@@ -6,7 +6,7 @@ aws_profile = "test-iac-terraform-ci"
 aws_region_bucket_remote_state = "clouddemo-lumi-starix-tf-gazelle"
 aws_region_key_remote_state    = "env:/testlab/vpc-terraform.tfstate"
 
-#################EC2
+####EC2
 public_key_location = "key/id_rsa.pub"
 private_key_location = "key/id_rsa"
 
