@@ -9,7 +9,7 @@ aws_region_key_iam_remote_state = "env:/testlab/lumi-iam-tf.tfstate"
 aws_region_bucket_remote_state_vn = "clouddemo-lumi-starix-tf-gazelle"
 aws_region_key_sg_remote_state_vn = "env:/testlab/lumi-sg-tf.tfstate"
 vpc_id = "vpc-039a936178b304105"
-###################  EC2
+####### EC2
 public_key_location = "key/id_rsa.pub"
 private_key_location = "key/id_rsa"
 proxy_gw_vm = [
