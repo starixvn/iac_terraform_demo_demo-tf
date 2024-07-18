@@ -9,7 +9,7 @@ aws_region_key_remote_state    = "env:/testlab/vpc-terraform.tfstate"
 aws_region_key_sg_remote_state_vn = "env:/testlab/lumi-sg-tf.tfstate"
 aws_region_key_remote_state_acm    = "env:/testlab/route53-acme-certificate-tf.tfstate"
 
-#######
+########
 proxy_gw_vm = [
   {
     "application_name" : "proxy-gw-01",
